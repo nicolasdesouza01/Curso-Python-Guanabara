@@ -1,0 +1,12 @@
+num = []
+while True:
+    n = int(input('Digite um número: '))
+    if n not in num:
+        num.append(n)
+        print('Valor adicionado com sucesso!')
+    else:
+        print('Valor duplicado! Não vou adicionar...')
+    r = input('Quer continuar? [S/N] ')
+    if r in 'Nn':
+        break
+print(f'Você digitou os valores {sorted(num)}')
