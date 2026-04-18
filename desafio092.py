@@ -15,4 +15,4 @@ for k, v in dados.items():
     print(f'{k}: R${v:.2f}')
   else:
     print(f'{k}: {v}')
-print('=-' * 26)
+print('=-' * 25)
