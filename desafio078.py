@@ -1,12 +1,14 @@
-valor = []
-for c in range (0, 5):
-    valor.append(int(input(f'Digite um valor na posição {c}: ')))
-print(f'Você digitou os valores {valor}')
-print(f'O maior valor digitado foi {max(valor)} na posição ', end='')
-for i, v in enumerate(valor):                          
-    if v == max(valor):
-        print(f'{i}... ', end='')
-print(f'\nO menor valor digitado foi {min(valor)} na posição ', end='')
-for i, v in enumerate(valor):
-    if v == min(valor):
-        print(f'{i}... ', end='')
+valores = []
+for c in range (1, 6):
+    valores.append(int(input(f'Digite o valor de poçisão {c}: ')))
+maior = max(valores)
+menor = min(valores)
+print (f'O maior número foi {maior} e está na posição: ', end='')
+for i, v in enumerate(valores):
+    if v == maior:
+        print(f'{i+1}',end=' ')
+print ()
+print (f'O menor número foi {menor} e está na posição: ', end='')
+for i, v in enumerate(valores):
+    if v == menor:
+        print (f'{i+1}',end=' ')
