@@ -1,20 +1,12 @@
-cont = 0
 lista = []
 while True:
-    n = int(input('Digite um número: '))
-    if n.alphanumeric():
-        continue
-    else:
-
-        print('Isso não é um número, tente novamente!')
-
-    cont += 1
+    n = int(input('Digite um valor: '))
     lista.append(n)
-    resp = input('Quer continuar? [S/N] ')
-    if resp in 'Nn':
+    parar = str(input('Deseja parar? [S/N]')).strip().upper()[0]
+    if parar in 'S':
         break
-print(f'Você digitou {cont} números e a lista em ordem decrescente é {sorted(lista, reverse=True)}')
-if n == 5:
-    print('O número 5 foi digitado!')
-else:        
-    print('O número 5 não foi digitado!')
+print (f'Foram digitados {len(lista)} números, a ordem decrescente dos números é {sorted(lista,reverse=True)}')
+if 5 in lista:
+    print ('O valor 5 está na lista')
+else:
+    print ('O valor 5 não está na lista')
