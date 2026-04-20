@@ -3,10 +3,11 @@ while True:
     n = int(input('Digite um número: '))
     if n not in num:
         num.append(n)
-        print('Valor adicionado com sucesso!')
     else:
-        print('Valor duplicado! Não vou adicionar...')
-    r = input('Quer continuar? [S/N] ')
-    if r in 'Nn':
+        print ('esse número já está na lista, por favor digite novamente...')
+    cont = str(input('Deseja continuar? [S/N]')).strip().upper()[0]
+    if cont in 'N':
         break
-print(f'Você digitou os valores {sorted(num)}')
+
+num.sort()
+print (f'Os valores digitados foram {num}')
